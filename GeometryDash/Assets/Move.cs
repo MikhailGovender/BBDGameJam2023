@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Speeds { Slow, Normal, Fast, Faster, Fastest}
 public class Move : MonoBehaviour
 {
-	public float speed;
+	public Speeds CurrentSpeed;
+	private float[] speedValues = { 8.6f, 10.4f, 12.96f, 15.6f, 19.27f };
 	private float Movement;
 
 	public float jump;
@@ -20,14 +22,16 @@ public class Move : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		Movement = Input.GetAxis("Horizontal");
-		rb.velocity = new Vector2(speed * Movement, rb.velocity.y);
+		//Movement = Input.GetAxis("Horizontal");
+		//rb.velocity = new Vector2(speed * Movement, rb.velocity.y);
+		transform.position += Vector3.right * speedValues[(int)CurrentSpeed] * Time.deltaTime;
 
 		//Handle Jumping - Jump = Spacebar in Unity
 		//Ground Check to prevent jumping in air
 		if(Input.GetButton("Jump") && isContactingGround)
 		{
-			rb.AddForce(new Vector2(rb.velocity.x, jump));
+			rb.velocity = Vector2.zero;
+			rb.AddForce(Vector2.up * 26.6581f, ForceMode2D.Impulse);
 		}
 	}
 
