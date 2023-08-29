@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="25mm"
+   height="35mm"
+   viewBox="0 0 25 35"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter14"
+       x="-0.030056593"
+       y="-0.018033956"
+       width="1.0601132"
+       height="1.0360679">
+      <feGaussianBlur
+         stdDeviation="0.18785371"
+         id="feGaussianBlur14" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter15"
+       x="-0.1532332"
+       y="-0.091939917"
+       width="1.3064664"
+       height="1.1838798">
+      <feGaussianBlur
+         stdDeviation="0.7698538"
+         id="feGaussianBlur15" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter16"
+       x="-0.57727972"
+       y="-0.34636783"
+       width="2.1545594"
+       height="1.6927357">
+      <feGaussianBlur
+         stdDeviation="2.6502907"
+         id="feGaussianBlur16" />
+    </filter>
+  </defs>
+  <g
+     id="layer1">
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use14"
+       id="use15"
+       style="mix-blend-mode:normal;filter:url(#filter15)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g14"
+       id="use14"
+       style="filter:url(#filter14)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use15"
+       id="use16"
+       style="mix-blend-mode:normal;filter:url(#filter16)" />
+    <g
+       id="g14">
+      <rect
+         style="fill:#6a43b7;fill-opacity:1;stroke-width:0.24153"
+         id="rect14"
+         width="5"
+         height="25"
+         x="5"
+         y="5" />
+      <rect
+         style="fill:#6a43b7;fill-opacity:1;stroke-width:0.24153"
+         id="rect14-9"
+         width="5"
+         height="25"
+         x="15"
+         y="5" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/main.uss?fileID=7433441132597879392&amp;guid=65c103ebc3e719748b355d2ef2556a24&amp;type=3#main" />
+    <ui:VisualElement class="fill-height fill-width flex" style="flex-grow: 1; align-self: center; justify-content: space-between; align-items: flex-end; background-image: url(&apos;project://database/Assets/Images/blue_fractals-wallpaper-1920x1080.jpg?fileID=2800000&amp;guid=e98435b1616198e4f9e38f8ff9888378&amp;type=3#blue_fractals-wallpaper-1920x1080&apos;);">
+        <ui:VisualElement style="flex-grow: 1; right: 20%; position: relative; width: 35%; -unity-background-image-tint-color: rgba(0, 0, 0, 0.74); background-color: rgba(0, 0, 0, 0.49);" />
+        <ui:Button text="Home" parse-escape-sequences="true" display-tooltip-when-elided="true" class="btn" style="background-color: rgb(255, 105, 105); position: absolute; bottom: 10px; left: 10px;" />
+        <ui:Label tabindex="-1" text="LeaderBoard" parse-escape-sequences="true" display-tooltip-when-elided="true" style="position: absolute; left: 0; top: 30px; font-size: 50px; background-color: rgb(219, 172, 137); margin-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 25px;" />
+    </ui:VisualElement>
+    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+</ui:UXML>
