@@ -15,7 +15,6 @@ public class LeaderBoard : MonoBehaviour
         doc = GetComponent<UIDocument>();
         root = doc.rootVisualElement;
         homeButton = root.Q<Button>("home-btn");
-
         homeButton.clicked += GoToMainMenu;
     }
 

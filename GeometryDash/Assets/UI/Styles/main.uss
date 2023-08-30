@@ -69,3 +69,19 @@
     -unity-font-style: bold-and-italic;
     -unity-font: url('project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=594a33a60f1a6b64a8a9b46f813a48fc&type=3#NotInter-Regular');
 }
+
+.btn:hover {
+}
+
+.progress-bar {
+    background-color: rgba(243, 100, 100, 0.83);
+    width: 90%;
+}
+
+.lvl-card {
+    margin-top: 0;
+    margin-right: 10px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    align-self: stretch;
+}

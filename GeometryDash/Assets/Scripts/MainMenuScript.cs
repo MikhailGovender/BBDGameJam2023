@@ -51,6 +51,6 @@ public class MainMenuScript : MonoBehaviour
 
     private void StartGame()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level Select");
     }
 }
