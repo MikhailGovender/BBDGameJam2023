@@ -2,19 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class CameraMovement : MonoBehaviour
 {
-  public GameObject target;
-  // Start is called before the first frame update
-  void Start()
-  {
-        
-  }
+	private Vector3 cameraOffset = new Vector3(0f, 0f, -10f);
+	private float smoothTime = 0.25f;
+	private Vector3 velocity = Vector3.zero;
 
-  // Update is called once per frame
-  void Update()
-  {
-    //Z Axis to -10 to ensure everything is seen
-    transform.position = new Vector3(target.transform.position.x,target.transform.position.y,-10);
-  }
+	[SerializeField] private Transform target;
+
+	private void Update()
+	{
+        Vector3 targetPosition = target.position + cameraOffset;
+		transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+	}
+
 }
