@@ -10,18 +10,20 @@ public class DeathScript : MonoBehaviour
     //Make player invisible on death
     SpriteRenderer spriteRenderer;
     Rigidbody2D PlayerRigidBody;
+    Move MoveScript;
 
 	private void Awake()
 	{
 		spriteRenderer = Player.GetComponent<SpriteRenderer>();
         PlayerRigidBody = Player.GetComponent<Rigidbody2D>();
+        MoveScript = Player.GetComponent<Move>();
 	}
 
 	// Start is called before the first frame update
 	void Start()
     {
-        
-    }
+
+	}
 
     // Update is called once per frame
     void Update()
@@ -36,6 +38,7 @@ public class DeathScript : MonoBehaviour
 
     IEnumerator Respawn(float duration)
     {
+        MoveScript.portalTraveled = false;
         //Player will dissapear on hitting obstacle
         spriteRenderer.enabled = false;
 		PlayerRigidBody.velocity = Vector2.zero;
@@ -43,6 +46,7 @@ public class DeathScript : MonoBehaviour
         //Player respawns after a few moments
 		Player.transform.position = startPoint.transform.position;
         spriteRenderer.enabled = true;
+		yield return new WaitForSeconds(0.5f);
 	}
 
 	//Function To Execute When Player collides with enemy/spike

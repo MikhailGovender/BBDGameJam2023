@@ -10,7 +10,8 @@ public class Move : MonoBehaviour
 
 	public float jump;
 	public bool isContactingGround;
-	private bool gotPowerUp;
+	public bool portalTraveled;
+	public bool hasRespawned;
 
 	private Rigidbody2D rb;
 	// Start is called before the first frame update
@@ -22,10 +23,10 @@ public class Move : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if(gotPowerUp)
+
+		if(portalTraveled)
 		{
 			MovePlayerBackward();
-			Invoke("ResetMovement", 0.5f);
 		}
 		else
 		{
@@ -57,10 +58,6 @@ public class Move : MonoBehaviour
 		{
 			isContactingGround = true;
 		}		
-		if (collision.gameObject.CompareTag("PowerUp"))
-		{
-			gotPowerUp = true;
-		}		
 
 	}
 
@@ -74,8 +71,20 @@ public class Move : MonoBehaviour
 
 	}
 
-	private void ResetMovement()
+	private void OnTriggerExit2D(Collider2D collision)
 	{
-		gotPowerUp = false;
+		if(collision.CompareTag("Portal"))
+		{
+			Debug.Log("HIT PORTAL");
+			StartCoroutine(PortalTravel(0.5f));
+			
+		}
 	}
+
+	IEnumerator PortalTravel(float duration)
+	{
+		yield return new WaitForSeconds(0.5f);
+		portalTraveled = true;
+	}
+
 }
