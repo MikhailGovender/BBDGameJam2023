@@ -10,11 +10,12 @@ TagManager:
   - Wall
   - PowerUp
   - Portal
+  - Win
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Wall
@@ -46,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 807791395
     locked: 0

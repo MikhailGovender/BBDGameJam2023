@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum Speeds { Slow, Normal, Fast, Faster, Fastest}
 public class Move : MonoBehaviour
@@ -12,12 +13,21 @@ public class Move : MonoBehaviour
 	public bool isContactingGround;
 	public bool portalTraveled;
 	public bool hasRespawned;
+	private bool onMobile;
+
+	public GameManagerScript GameManagerScript;
 
 	private Rigidbody2D rb;
 	// Start is called before the first frame update
 	void Start()
 	{
+		if(SystemInfo.deviceType == DeviceType.Handheld)
+		{
+			onMobile = true;
+		}
 		rb = GetComponent<Rigidbody2D>();
+
+		Time.timeScale = 1f;
 	}
 
 	// Update is called once per frame
@@ -35,11 +45,27 @@ public class Move : MonoBehaviour
 
 		//Handle Jumping - Jump = Spacebar in Unity
 		//Ground Check to prevent jumping in air
-		if(Input.GetButton("Jump") && isContactingGround)
+		if(onMobile)
 		{
-			rb.velocity = Vector2.zero;
-			rb.AddForce(Vector2.up * 26.6581f, ForceMode2D.Impulse);
+			Touch touch = Input.GetTouch(0);
+			if(touch.phase == TouchPhase.Began)
+			{
+				Jump();
+			}
 		}
+		else
+		{
+			if (Input.GetButton("Jump") && isContactingGround)
+			{
+				Jump();
+			}
+		}
+	}
+
+	private void Jump()
+	{
+		rb.velocity = Vector2.zero;
+		rb.AddForce(Vector2.up * 26.6581f, ForceMode2D.Impulse);
 	}
 
 	private void MovePlayerForward()
@@ -49,6 +75,10 @@ public class Move : MonoBehaviour
 	private void MovePlayerBackward()
 	{
 		transform.position -= Vector3.right * speedValues[(int)CurrentSpeed] * Time.deltaTime;
+	}	
+	private void StopPlayer()
+	{
+		transform.position = Vector3.zero;
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
@@ -57,7 +87,12 @@ public class Move : MonoBehaviour
 		if (collision.gameObject.CompareTag("Ground"))
 		{
 			isContactingGround = true;
-		}		
+		}
+		if (collision.gameObject.CompareTag("Win"))
+		{
+			GameManagerScript.GameOver();
+			Time.timeScale = 0;
+		}
 
 	}
 
@@ -68,16 +103,13 @@ public class Move : MonoBehaviour
 		{
 			isContactingGround = false;
 		}
-
 	}
 
 	private void OnTriggerExit2D(Collider2D collision)
 	{
 		if(collision.CompareTag("Portal"))
 		{
-			Debug.Log("HIT PORTAL");
 			StartCoroutine(PortalTravel(0.5f));
-			
 		}
 	}
 

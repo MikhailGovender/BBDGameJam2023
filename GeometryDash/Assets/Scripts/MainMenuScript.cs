@@ -9,6 +9,11 @@ public class MainMenuScript : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level Test");
     }
+
+	public void HowToPlay()
+	{
+		SceneManager.LoadScene("How To Play");
+	}
 }
