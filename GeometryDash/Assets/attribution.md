@@ -1,0 +1,1 @@
+<a href='https://pngtree.com/freepng/dynamic-gradient-triangle-technology-element_3690095.html'>png image from pngtree.com/</a>
