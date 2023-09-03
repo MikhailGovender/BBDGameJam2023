@@ -11,6 +11,7 @@ TagManager:
   - PowerUp
   - Portal
   - Win
+  - ProgMarker
   layers:
   - Default
   - TransparentFX

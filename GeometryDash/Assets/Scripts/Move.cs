@@ -17,6 +17,8 @@ public class Move : MonoBehaviour
 
 	public GameManagerScript GameManagerScript;
 
+	public ProgressBarController ProgressBarController;
+
 	private Rigidbody2D rb;
 	// Start is called before the first frame update
 	void Start()
@@ -110,6 +112,10 @@ public class Move : MonoBehaviour
 		if(collision.CompareTag("Portal"))
 		{
 			StartCoroutine(PortalTravel(0.5f));
+		}
+		if (collision.CompareTag("ProgMarker"))
+		{
+			ProgressBarController.IncrementProgress(0.25f);
 		}
 	}
 

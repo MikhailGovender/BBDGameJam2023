@@ -12,6 +12,9 @@ public class DeathScript : MonoBehaviour
     Rigidbody2D PlayerRigidBody;
     Move MoveScript;
 
+	public ProgressBarController ProgressBarController;
+
+
 	private void Awake()
 	{
 		spriteRenderer = Player.GetComponent<SpriteRenderer>();
@@ -37,12 +40,15 @@ public class DeathScript : MonoBehaviour
     }
 
     IEnumerator Respawn(float duration)
-    {
+     {
         MoveScript.portalTraveled = false;
+        ProgressBarController.ResetProgress();
+
         //Player will dissapear on hitting obstacle
         spriteRenderer.enabled = false;
 		PlayerRigidBody.velocity = Vector2.zero;
 		yield return new WaitForSeconds(duration);
+
         //Player respawns after a few moments
 		Player.transform.position = startPoint.transform.position;
         spriteRenderer.enabled = true;

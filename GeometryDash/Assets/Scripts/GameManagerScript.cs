@@ -20,7 +20,8 @@ public class GameManagerScript : MonoBehaviour
 
     public void GameOver()
     {
-        gameOverUI.SetActive(true);
+		Cursor.visible = true;
+		gameOverUI.SetActive(true);
     }
 
 	public void Restart()
