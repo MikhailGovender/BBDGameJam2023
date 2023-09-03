@@ -28,7 +28,11 @@ public class PauseMenu : MonoBehaviour
         resumeButton.clicked += ResumeGame;
         quitButton.clicked += QuitGame;
 
-        setVisible(menuPanel, false);
+        ResumeGame();
+    }
+
+    private void Start() {
+        ResumeGame();
     }
 
     private void setVisible(VisualElement element, bool visible){
