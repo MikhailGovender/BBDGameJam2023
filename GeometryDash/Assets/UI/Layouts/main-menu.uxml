@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/main.uss?fileID=7433441132597879392&amp;guid=65c103ebc3e719748b355d2ef2556a24&amp;type=3#main" />
+    <ui:VisualElement name="VisualElement" class="flex" style="flex-grow: 1; align-items: center; justify-content: space-around; align-self: auto; background-image: url(&apos;project://database/Assets/Images/dfwdjni-e5bb96a1-61bd-482e-a353-30433f71d938.png?fileID=2800000&amp;guid=2b74e5f715b66374ea5efd7bf8e9af4e&amp;type=3#dfwdjni-e5bb96a1-61bd-482e-a353-30433f71d938&apos;); flex-direction: row; flex-wrap: nowrap;">
+        <ui:VisualElement class="fill-height" style="flex-grow: 1; flex-direction: column-reverse; width: 10%; align-items: center;">
+            <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="settings-btn" class="btn" style="background-color: rgb(124, 168, 255); width: 109px; -unity-text-align: middle-center; -unity-font-style: bold-and-italic; font-size: 20px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="VisualElement" class="centermenu" style="flex-grow: 1; justify-content: center; align-items: center; background-image: none; -unity-background-scale-mode: stretch-to-fill;">
+            <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="play-btn" class="btn btn-75" style="background-color: rgb(129, 204, 90);" />
+            <ui:Button text="Leaderboard" parse-escape-sequences="true" display-tooltip-when-elided="true" name="leaderboard-btn" class="btn btn-75" style="background-color: rgb(245, 188, 101);" />
+            <ui:Button text="Exit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="exit-btn" class="btn btn-75" style="background-color: rgb(241, 99, 99);" />
+        </ui:VisualElement>
+        <ui:VisualElement class="fill-height" style="flex-grow: 1; width: 10%; align-items: center; flex-direction: column-reverse;">
+            <ui:Button text="About" parse-escape-sequences="true" display-tooltip-when-elided="true" name="about-btn" class="btn" style="background-color: rgb(124, 168, 255); width: 109px; font-size: 20px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

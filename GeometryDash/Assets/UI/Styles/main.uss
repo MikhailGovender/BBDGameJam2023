@@ -1,0 +1,87 @@
+.centered {
+}
+
+.flex {
+    flex-direction: column;
+}
+
+.centermenu {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 50%;
+    height: 50%;
+}
+
+.btn {
+    font-size: 30px;
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-left-color: rgba(0, 0, 0, 0.31);
+    border-right-color: rgba(0, 0, 0, 0.31);
+    border-top-color: rgba(0, 0, 0, 0.31);
+    border-bottom-color: rgba(0, 0, 0, 0.31);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-elastic;
+    transition-delay: 0.1s;
+    max-width: none;
+    background-color: rgba(0, 0, 0, 0.75);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.fill-height {
+    height: 100%;
+}
+
+.fill-width {
+    min-height: 100%;
+    width: 100%;
+}
+
+.btn-75 {
+    width: 75%;
+}
+
+.menu-btn {
+    padding-top: 35px;
+    padding-right: 35px;
+    padding-bottom: 35px;
+    padding-left: 35px;
+}
+
+* {
+    -unity-font-style: bold-and-italic;
+    -unity-font: url('project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=594a33a60f1a6b64a8a9b46f813a48fc&type=3#NotInter-Regular');
+}
+
+.btn:hover {
+}
+
+.progress-bar {
+    background-color: rgba(243, 100, 100, 0.83);
+    width: 90%;
+}
+
+.lvl-card {
+    margin-top: 0;
+    margin-right: 10px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    align-self: stretch;
+}
