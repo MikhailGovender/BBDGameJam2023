@@ -22,7 +22,7 @@ public class DeathScript : MonoBehaviour
     //Function To Execute When Player collides with enemy/spike
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(collision.gameObject.CompareTag("Player"))
+		if(collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Wall"))
         {
             //Reset Position to Start
             Player.transform.position = startPoint.transform.position;
