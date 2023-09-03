@@ -9,6 +9,13 @@
             <ui:Instance template="level-card" name="level-card" class="lvl-card">
                 <AttributeOverrides element-name="lvl-name-lbl" text="Level 2" />
             </ui:Instance>
+            <ui:Instance template="level-card" name="level-card" class="lvl-card">
+                <AttributeOverrides element-name="lvl-name-lbl" text="Level 3" />
+            </ui:Instance>
+            <ui:Instance template="level-card" name="level-card" class="lvl-card">
+                <AttributeOverrides element-name="lvl-name-lbl" text="Level 4 Canon Event" />
+            </ui:Instance>
+            <ui:Instance template="level-card" name="level-card" class="lvl-card" />
         </ui:ScrollView>
     </ui:VisualElement>
     <ui:Button text="Home" parse-escape-sequences="true" display-tooltip-when-elided="true" name="home-btn" class="btn" style="background-color: rgb(255, 105, 105); position: absolute; bottom: 10px; left: 10px;" />
