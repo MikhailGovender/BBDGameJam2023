@@ -22,13 +22,9 @@ public class MainMenuScript : MonoBehaviour
         root = doc.rootVisualElement;
         playButton = root.Q<Button>("play-btn");
         exitButton = root.Q<Button>("exit-btn");
-        settingsButton = root.Q<Button>("settings-btn");
-        aboutButton = root.Q<Button>("about-btn");
 
         playButton.clicked += StartGame;
         exitButton.clicked += ExitGame;
-        settingsButton.clicked += GoToSettings;
-        aboutButton.clicked += GoToAboutPage;
     }
 
     private void GoToAboutPage() {
