@@ -207,7 +207,7 @@ PrefabInstance:
       objectReference: {fileID: 134413143}
     - target: {fileID: -4431021832392863402, guid: 103fe2dd56dc5d94692be2bc16e321be, type: 3}
       propertyPath: levelName
-      value: Level 4 Canon Event
+      value: Canon Event
       objectReference: {fileID: 0}
     - target: {fileID: 383237500896036620, guid: 103fe2dd56dc5d94692be2bc16e321be, type: 3}
       propertyPath: m_LocalPosition.x
@@ -593,7 +593,7 @@ PrefabInstance:
     - target: {fileID: 8739537222236472380, guid: c0f3306bb896fd444ae589c6b19df4b9, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 134413143}
+      objectReference: {fileID: 1093388178}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2665,6 +2665,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d7e632372b0c9245b8ae4e3b2c19b20, type: 3}
+--- !u!4 &1093388178 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3859345633650279249, guid: 1d7e632372b0c9245b8ae4e3b2c19b20, type: 3}
+  m_PrefabInstance: {fileID: 1093388177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1430456306
 PrefabInstance:
   m_ObjectHideFlags: 0

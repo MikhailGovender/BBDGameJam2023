@@ -29,6 +29,7 @@ public class LevelSelect : MonoBehaviour
             VisualElement levelCard = (VisualElement) levelCards[i];
             Label levelLabel = levelCard.Q<Label>("lvl-name-lbl");
             string levelName = levelLabel.text;
+            Debug.Log(levelName);
             LevelData data = LevelData.getData(levelName);
 
             ProgressBar lvlProgress = levelCard.Q<ProgressBar>("lvl-progress");
