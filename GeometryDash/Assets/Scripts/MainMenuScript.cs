@@ -21,13 +21,11 @@ public class MainMenuScript : MonoBehaviour
         doc = GetComponent<UIDocument>();
         root = doc.rootVisualElement;
         playButton = root.Q<Button>("play-btn");
-        leaderboardButton = root.Q<Button>("leaderboard-btn");
         exitButton = root.Q<Button>("exit-btn");
         settingsButton = root.Q<Button>("settings-btn");
         aboutButton = root.Q<Button>("about-btn");
 
         playButton.clicked += StartGame;
-        leaderboardButton.clicked += GoToLeaderboard;
         exitButton.clicked += ExitGame;
         settingsButton.clicked += GoToSettings;
         aboutButton.clicked += GoToAboutPage;
@@ -39,10 +37,6 @@ public class MainMenuScript : MonoBehaviour
 
     private void GoToSettings() {
 
-    }
-
-    private void GoToLeaderboard() {
-        SceneManager.LoadScene("LeaderBoard");
     }
 
     private void ExitGame() {

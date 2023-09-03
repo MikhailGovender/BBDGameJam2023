@@ -85,3 +85,11 @@
     margin-left: 10px;
     align-self: stretch;
 }
+
+.unity-progress-bar__progress {
+    background-color: rgba(255, 114, 114, 0.76);
+}
+
+.unity-progress-bar__background {
+    background-color: rgba(85, 190, 248, 0.72);
+}

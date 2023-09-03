@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using Custom;
 public class LevelSelect : MonoBehaviour
 {
     [SerializeField] public Scene[] levels;
@@ -11,6 +12,7 @@ public class LevelSelect : MonoBehaviour
     private ArrayList levelCards;
     private UIDocument doc;
     private VisualElement root;
+    
 
     void Awake() {
         doc = GetComponent<UIDocument>();
@@ -27,6 +29,11 @@ public class LevelSelect : MonoBehaviour
             VisualElement levelCard = (VisualElement) levelCards[i];
             Label levelLabel = levelCard.Q<Label>("lvl-name-lbl");
             string levelName = levelLabel.text;
+            LevelData data = LevelData.getData(levelName);
+
+            ProgressBar lvlProgress = levelCard.Q<ProgressBar>("lvl-progress");
+
+            lvlProgress.value = data.completion;
 
             if (isUnlocked (levelName)) {
                 levelCard.AddManipulator(new Clickable(evt => SceneManager.LoadScene(levelName)));
